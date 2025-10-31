@@ -1,0 +1,9 @@
+# Mision 1
+## Introducción a python
+
+| Comandos         | Utilidad                                  |
+| ---------------- | ----------------------------------------- |
+| python --version | Mostrar que version de python tenemos     |
+| cd               | Navegar entre carpetas                    |
+| dir o ls         | Listar lo que esta dentro de las carpetas |
+| py nombre.py     | Ejecuta el archivo de python              |
