@@ -7,3 +7,8 @@
 | cd               | Navegar entre carpetas                    |
 | dir o ls         | Listar lo que esta dentro de las carpetas |
 | py nombre.py     | Ejecuta el archivo de python              |
+
+Comandos de git
+git init
+git add .
+git commit -m "Nombre del commit."
