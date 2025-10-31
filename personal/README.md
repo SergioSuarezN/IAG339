@@ -12,3 +12,4 @@ Comandos de git
 git init
 git add .
 git commit -m "Nombre del commit."
+git push -u origin master.
