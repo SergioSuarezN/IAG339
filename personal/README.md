@@ -19,6 +19,3 @@ Comando | Descripcion
 -|-
 pip list | lista las librerias instaladas
 python -m venv nombre | crear nombre del entorno
-
-
-set
