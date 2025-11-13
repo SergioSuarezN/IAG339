@@ -16,7 +16,6 @@ def chat(model, vectorizer, unique_answers):
         
 def main():
     # Intentar cargar el modelo
-    model, vectorizer, unique_answers=load_model()
     # Menu principal
     while True:
         print("\n=== 🤖 MENU PRINCIPAL DEL CHATBOT===")
