@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Inteligente</title>
+</head>
+<body>
+
+    <div id="chatbox">
+        <h2> 🤖 ChatBot</h2>
+        <div id="messages"></div>
+        <form id="chatForm" >
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje..." autocomplete="off">
+        </form>
+    </div>
+
+<script>
+    const form = document.getElementById("chatForm");
+    const input = document.getElementById("userInput");
+    const messages = document.getElementById("messages");
+
+    form.addEventListener("submit", async (e)=> {
+        e.preventDefault();
+        const text = input.value.trim();
+        if(!text) return;
+        messages.innerHTML+= `<div class="msg user"> Tu: ${text} </div>`;
+        input.value = "";
+        const response  = await fetch("/chat", {
+            method: "POST",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: `message=${encodeURIComponent(text)}`
+        });
+    const data = await response.json();
+    messages.innerHTML+= `<div class="msg bot">Bot: ${data.response} </div>`;
+    messages.scrollTop = messages.scrollHeight;
+    
+    });
+    
+</script>
+    
+</body>
+</html>
