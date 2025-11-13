@@ -15,7 +15,6 @@ def chat():
     if not user_text.strip():
         return jsonify({"reponse":"Por favor escriba algo."})
     response = predict_answer(model, vectorizer, unique_answers,user_text)
-    return jsonify({"reponse": response})
-
+    return jsonify({"response": response})
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=5000)
