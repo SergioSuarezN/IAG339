@@ -61,6 +61,9 @@ def chat():
 
     # ✅ Mensaje más descriptivo
     #response = f"Tu mensaje pertenece al grupo {cluster}. Este grupo contiene frases con significados similares."
+    
+    
+    
     response = random.choice(RESPUESTAS.get(cluster, [
         "No estoy seguro de emtender, pero puedo intentarlo otra vez."
     ]))
