@@ -15,19 +15,19 @@ if model is None:
 #Respuesta por grupo
 RESPUESTAS = {
     0:[
-        "!Hola! 😀 ¿ Cómo estás ?",
-       "!Qué gusto saludarte!",
-       "!Hola! ¿ En que puedo ayudarte?",
-       ],
-    1:[
-        "Hasta luego 👋!",
-        "Nos vemos pronto. ",
-        "Cuidate. Espero verte de nuevo",
-        ],
-    2:[
         "Soy un asistente virtual creado para ayudarte 🤖",
         "!Por supuesto! ¿ Con qué necesitas ayuda ?",
         "Cuéntame tu problema y buscaré una solución",
+       ],
+    1:[
+        "Lamento que te sientas así, puedo intentarlo de nuevo",
+        "Parece que algo no salió bien, ¿ Quieres que lo revisemos",
+        "No siempre soy perfecto, pero puedo intentarlo otra vez.",
+        ],
+    2:[
+        "!Hola! 😀 ¿ Cómo estás ?",
+       "!Qué gusto saludarte!",
+       "!Hola! ¿ En que puedo ayudarte?",
        ],
     3:[
         "Puedo ofrecerte información o resolver tus dudas",
@@ -40,9 +40,9 @@ RESPUESTAS = {
         "!Muy amable de tu parte!",
         ],
     5:[
-        "Lamento que te sientas así, puedo intentarlo de nuevo",
-        "Parece que algo no salió bien, ¿ Quieres que lo revisemos",
-        "No siempre soy perfecto, pero puedo intentarlo otra vez.",
+        "Hasta luego 👋!",
+        "Nos vemos pronto. ",
+        "Cuidate. Espero verte de nuevo",
         ]
 }
 @app.route("/")
@@ -61,7 +61,6 @@ def chat():
 
     # ✅ Mensaje más descriptivo
     #response = f"Tu mensaje pertenece al grupo {cluster}. Este grupo contiene frases con significados similares."
-    
     
     
     response = random.choice(RESPUESTAS.get(cluster, [
